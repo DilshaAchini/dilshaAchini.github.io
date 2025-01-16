@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scrolling Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills & Hobbies</a></li>
+                <li><a href="#cv">My Curriculum Vitae</a></li>
+				<li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+		<section id="about">
+			<div class="about-container">
+				<div class="profile-pic-container">
+					<img src="image.png" alt="Dilsha Achini" class="profile-pic" />
+				</div>
+				<div>
+					<h2>About Me</h2>
+					<p>
+						Hello! I’m Dilsha Achini, a dedicated Laboratory Technician with four years of 
+						experience in conducting lab analyses and tests in a university setting. I’m 
+						solution-oriented, skilled in handling laboratory equipment, preparing test samples, 
+						and adhering to safety protocols. My strong attention to detail, problem-solving 
+						abilities, and communication skills ensure accurate data collection and efficient 
+						laboratory operations. 
+					</p>
+					<p>
+						I am proficient in English, Sinhala, and Tamil, making me well-suited to work in 
+						diverse environments. I am eager to contribute my expertise to a reliable company.
+					</p>
+				</div>
+			</div>
+		</section>
+		
+		<section id="education">
+			<div class="education-container">
+				<h2>Education</h2>
+				<ul>
+					<li>
+						<strong>Secondary Education:</strong> Achieved nine A grades in G.C.E. O/L 
+						examinations and passed G.C.E. A/Ls in Biology, Chemistry, and Physics.
+					</li>
+					<li>
+						<strong>BSc (Hons) in Biotechnology:</strong> First Class Honors at 
+						Sri Lanka Institute of Information Technology (2024–2028).
+					</li>
+					<li>
+						<strong>Diploma in English Language and Literature:</strong> Currently pursuing at 
+						Aquinas College of Higher Studies.
+					</li>
+				</ul>
+			</div>
+		</section>
+		
+		<section id="experience">
+			<div class="experience-container">
+				<h2>Professional Experience</h2>
+				<ul>
+					<li>
+						<strong>Assistant Pharmacist:</strong> Worked at Balasooriya Private Hospital, 
+						gaining hands-on experience in pharmaceutical operations and patient care.
+					</li>
+				</ul>
+			</div>
+		</section>
+		
+		
+		<section id="skills">
+			<h2>Skills & Hobbies</h2>
+			<div class="skills-container">
+				<!-- Soft Skills -->
+				<div class="skills-category">
+					<h3>Soft Skills</h3>
+					<div class="skill">
+						<p>Effective Communication</p>
+						<div class="progress-bar" style="width: 80%; background-color: #ff4d4d;"></div>
+					</div>
+					<div class="skill">
+						<p>Teamwork</p>
+						<div class="progress-bar" style="width: 90%; background-color: #ff9f00;"></div>
+					</div>
+					<div class="skill">
+						<p>Organization</p>
+						<div class="progress-bar" style="width: 70%; background-color: #f4e142;"></div>
+					</div>
+					<div class="skill">
+						<p>Time Management</p>
+						<div class="progress-bar" style="width: 60%; background-color: #76d7c4;"></div>
+					</div>
+				</div>
+		
+				<!-- Hard Skills -->
+				<div class="skills-category">
+					<h3>Hard Skills</h3>
+					<div class="skill">
+						<p>Microsoft Office Suite</p>
+						<div class="progress-bar" style="width: 85%; background-color: #3498db;"></div>
+					</div>
+					<div class="skill">
+						<p>Laboratory Techniques</p>
+						<div class="progress-bar" style="width: 95%; background-color: #2ecc71;"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<section id="cv">
+			<div>
+				<h2>My Curriculum Vitae</h2>
+				<p>Download my resume: <a href="cv.pdf" download>Resume (PDF)</a></p>
+			</div>
+		</section>
+
+		<section id="contact">
+			<h2>Contact Me</h2>
+			<div class="contact-container">
+				<div class="contact-info">
+					<p><strong>Email:</strong> <a href="mailto:Dilshaachini0724@gmail.com">Dilshaachini0724@gmail.com</a></p>
+					<p><strong>Phone:</strong> +94 78 194 8069</p>
+					<p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn Profile</a></p>
+					<p><strong>GitHub:</strong> <a href="https://github.com/DilshaAchini" target="_blank">GitHub Profile</a></p>
+				</div>
+				<div class="contact-form">
+					<h3>Send a Message</h3>
+					<form action="contact-form-handler.php" method="post">
+						<input type="text" name="name" placeholder="Your Name" required>
+						<input type="email" name="email" placeholder="Your Email" required>
+						<textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+						<button type="submit">Send Message</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		
+		
+    </main>
+
+    <footer>
+        <p>© [Dilsha Achini] | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+	<script>
+		// Select all links with hashes
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault(); // Prevent default anchor click behavior
+	
+				// Scroll to the target section smoothly
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
+			});
+		});
+	</script>
+	
+</body>
+</html>
